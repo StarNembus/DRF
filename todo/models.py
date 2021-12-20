@@ -1,4 +1,5 @@
 from django.db import models
+
 from users.models import User
 
 
@@ -21,4 +22,6 @@ class ToDo(models.Model):
 
     def __str__(self):
         return f'{self.project} {self.user} {self.todo_text}'
+
+
 
