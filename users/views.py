@@ -8,14 +8,14 @@ from rest_framework.generics import ListAPIView, RetrieveAPIView, UpdateAPIView,
 from rest_framework.renderers import JSONRenderer
 
 
-class UserPagination(PageNumberPagination):
-    page_size = 2
+# class UserPagination(PageNumberPagination):
+#     page_size = 2
 
 
 class UserViewSet(ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
-    pagination_class = UserPagination
+    # pagination_class = UserPagination
     http_method_names = ['head', 'get', 'put', 'patch']  # ограничение на создание и удаление
 
 

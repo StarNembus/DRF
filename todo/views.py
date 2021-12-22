@@ -11,8 +11,8 @@ from rest_framework.pagination import PageNumberPagination
 from django_filters import rest_framework as filters
 
 
-class ProjectPagination(PageNumberPagination):
-    page_size = 10
+# class ProjectPagination(PageNumberPagination):
+#     page_size = 10
 
 
 class ProjectFilter(filters.FilterSet):
@@ -37,8 +37,8 @@ class ProjectListAPIView(ListAPIView):
     serializer_class = ProjectSerializer
 
 
-class ToDoPagination(PageNumberPagination):
-    page_size = 20
+# class ToDoPagination(PageNumberPagination):
+#     page_size = 20
 
 
 class ToDoViewSet(ModelViewSet):
