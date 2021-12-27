@@ -9,7 +9,7 @@ from .serializers import ProjectSerializer
 from .models import Project, ToDo
 from rest_framework.pagination import PageNumberPagination
 from django_filters import rest_framework as filters
-
+from rest_framework.permissions import IsAuthenticatedOrReadOnly
 
 # class ProjectPagination(PageNumberPagination):
 #     page_size = 10
@@ -33,6 +33,7 @@ class ProjectViewSet(ModelViewSet):
 
 class ProjectListAPIView(ListAPIView):
     renderer_classes = [JSONRenderer]
+    permission_classes = [IsAuthenticatedOrReadOnly]
     queryset = Project.objects.all()
     serializer_class = ProjectSerializer
 
