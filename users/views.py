@@ -15,7 +15,8 @@ from rest_framework.renderers import JSONRenderer
 
 class UserViewSet(ModelViewSet):
     # permission_classes = [IsAuthenticatedOrReadOnly]
-    permission_classes = [DjangoModelPermissions]
+    permission_classes = [IsAuthenticated]
+    # permission_classes = [DjangoModelPermissions]
     queryset = User.objects.all()
     serializer_class = UserSerializer
     # pagination_class = UserPagination
