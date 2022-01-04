@@ -30,7 +30,7 @@ class ProjectViewSet(ModelViewSet):
     filter_backends = [DjangoFilterBackend]
     filter_fields = ['name']
     filter_class = ProjectFilter
-    permission_classes = [IsAuthenticated]
+    # permission_classes = [IsAuthenticated]
 
 
 class ProjectListAPIView(ListAPIView):
@@ -49,7 +49,7 @@ class ToDoViewSet(ModelViewSet):
     serializer_class = ToDoSerializer
     filter_backends = [DjangoFilterBackend]
     filter_fields = ['project']
-    permission_classes = [IsAuthenticated]
+    # permission_classes = [IsAuthenticated]
 
     def destroy(self, request, *args, **kwargs):
         instance = self.get_object()
