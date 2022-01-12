@@ -36,7 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'corsheaders', # для работы с localhost 127 и 3000
+    'corsheaders',  # для работы с localhost 127 и 3000
     'users',
     'todo',
     'django_filters',
@@ -52,8 +52,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
-
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
