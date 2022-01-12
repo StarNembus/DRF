@@ -13,3 +13,7 @@ class User(AbstractUser):
 
     def __str__(self):
         return f'{self.username} {self.first_name}  {self.last_name}  {self.email}'
+
+    # def safe_delete(self):
+    #     self.is_active = False
+    #     self.save()
