@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework.response import Response
 from rest_framework.viewsets import ModelViewSet
-from .serializers import UserSerializer
+from .serializers import UserSerializer, UserSerializer2
 from .models import User
 from rest_framework.pagination import PageNumberPagination
 from rest_framework.permissions import AllowAny, IsAuthenticatedOrReadOnly, IsAuthenticated, IsAdminUser, DjangoModelPermissions, DjangoModelPermissionsOrAnonReadOnly
@@ -20,6 +20,11 @@ class UserViewSet(ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
     # pagination_class = UserPagination
+
+    def get_serializer_class(self):
+        if self.request.version == '0.2':
+            return UserSerializer2
+        return UserSerializer
 
 
 class UserListAPIView(ListAPIView):
