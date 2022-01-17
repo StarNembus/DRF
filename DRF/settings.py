@@ -42,7 +42,12 @@ INSTALLED_APPS = [
     'todo',
     'django_filters',
     'drf_yasg',
+    'graphene_django'
 ]
+
+GRAPHENE = {
+    'SCHEMA': 'users.schema.schema'
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
