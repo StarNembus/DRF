@@ -57,12 +57,6 @@ class TodoForm extends  React.Component {
             <select  name= 'user' onChange={(event) => this.handleUserChange(event)}>
                 {this.props.user.map((user) => <option value={user.id}>{user.first_name}{user.last_name}</option> )}
                 </select>
-            {/*для заметок создала возможность выбора привязанного проекта, при создании проект выбирается, но заметки не создаются, не могу найти причину*/
-            }
-            {/*выходит ошибка Error: Request failed with status code 400
-            at createError (vendors~main.chunk.js:1792)
-            at settle (vendors~main.chunk.js:2063)
-            at XMLHttpRequest.onloadend (vendors~main.chunk.js:1*/}
             <select  name= 'project' onChange={(event) => this.handleProjectChange(event)}>
                 {this.props.project.map((project) => <option value={project.id}> {project.id}</option> )}
             </select>
