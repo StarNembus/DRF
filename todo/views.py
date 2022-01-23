@@ -9,6 +9,7 @@ from .serializers import ProjectSerializer
 from .models import Project, ToDo
 from rest_framework.pagination import PageNumberPagination
 from django_filters import rest_framework as filters
+from rest_framework.permissions import IsAuthenticatedOrReadOnly, IsAuthenticated
 
 
 # class ProjectPagination(PageNumberPagination):
@@ -29,10 +30,12 @@ class ProjectViewSet(ModelViewSet):
     filter_backends = [DjangoFilterBackend]
     filter_fields = ['name']
     filter_class = ProjectFilter
+    # permission_classes = [IsAuthenticated]
 
 
 class ProjectListAPIView(ListAPIView):
     renderer_classes = [JSONRenderer]
+    permission_classes = [IsAuthenticatedOrReadOnly]
     queryset = Project.objects.all()
     serializer_class = ProjectSerializer
 
@@ -46,6 +49,7 @@ class ToDoViewSet(ModelViewSet):
     serializer_class = ToDoSerializer
     filter_backends = [DjangoFilterBackend]
     filter_fields = ['project']
+    # permission_classes = [IsAuthenticated]
 
     def destroy(self, request, *args, **kwargs):
         instance = self.get_object()
