@@ -24,7 +24,7 @@ SECRET_KEY = 'django-insecure-4$-u65w*f1n^5y^=te94vae$kedoo^4)(xqsjr#^2#w624xs0s
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'todo',
     'django_filters',
     'drf_yasg',
-    'graphene_django'
+    # 'graphene_django'
 ]
 
 GRAPHENE = {
@@ -89,10 +89,21 @@ WSGI_APPLICATION = 'DRF.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'DRF',
+        'USER': 'kwazart',
+        'PASSWORD': '52669',
+        'HOST': 'db',
+        'PORT': '5432',
     }
 }
 
