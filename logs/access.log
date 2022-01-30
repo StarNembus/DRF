@@ -1,0 +1,4 @@
+172.18.0.1 - - [28/Jan/2022:14:09:09 +0000] "GET / HTTP/1.1" 200 - "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/537.36"
+172.18.0.1 - - [28/Jan/2022:14:09:09 +0000] "GET /manifest.json HTTP/1.1" 200 - "http://127.0.0.1/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/537.36"
+172.18.0.1 - - [28/Jan/2022:14:34:38 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/537.36"
+172.18.0.1 - - [28/Jan/2022:14:34:39 +0000] "GET /manifest.json HTTP/1.1" 304 - "http://127.0.0.1/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/537.36"

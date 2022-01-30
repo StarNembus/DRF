@@ -13,6 +13,7 @@
     "react-scripts": "4.0.3",
     "react-simple-tree-menu": "^1.1.18",
     "styled-components": "^5.3.3",
+    "universal-cookie": "^4.0.4",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
